@@ -18,24 +18,26 @@ function App() {
   ]
 
   const appStyle = {
-      minWidth: "100%",
-      minHeight: "100%",
-      backgroundImage: tempBg[Math.floor(Math.random() * tempBg.length)],
-      backgroundSize: "cover",
-      justifyContent: "center",
-      alignContent: "center",
-      overflow: "hidden",
+    minWidth: "100vw",
+    minHeight: "100vh",
+
+    backgroundImage: tempBg[Math.floor(Math.random() * tempBg.length)],
+    backgroundSize: "cover",
+    overflow: "hidden",
+
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    justifyItems: "center",
+    alignItems: "center"
   }
 
   return (
     <div
       className="App"
       style={appStyle}
+      onClick={() => refreshAffirmation()}
     >
-      <div
-        className="content"
-        onClick={() => refreshAffirmation()}
-      >
+      <div className="content">
         <h1 key={affirmation}>{affirmation}.</h1>
         <p key={Math.random()}>Click to refresh</p>
       </div>
