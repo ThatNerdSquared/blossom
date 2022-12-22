@@ -1,0 +1,7 @@
+{
+  "name": "Blossom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

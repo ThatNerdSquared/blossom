@@ -1,0 +1,8 @@
+{
+  "appId": "ca.nathanyeung.blossom",
+  "appName": "Blossom",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "cordova": {}
+}
