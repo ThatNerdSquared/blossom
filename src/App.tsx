@@ -10,8 +10,11 @@ function App() {
   }
 
   const tempBg = [
-    `url(https://images.unsplash.com/photo-1661457000438-550ec1b2af91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)`,
-    `url(https://images.unsplash.com/photo-1564612123554-78943ddb2ba3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)`
+    "linear-gradient(to right, #ede9fe, #dbeafe)",
+    "linear-gradient(to right, #FCE6DB, #E6CCE8)",
+    "linear-gradient(to right, #ccd5ae, #fefae0)",
+    "linear-gradient(to right, #eae4e9, #fad2e1)",
+    "linear-gradient(to right, #99a9e6, #e2b6cf)"
   ]
 
   const appStyle = {
@@ -19,10 +22,6 @@ function App() {
       minHeight: "100%",
       backgroundImage: tempBg[Math.floor(Math.random() * tempBg.length)],
       backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center center",
-      // display: "grid",
-      // gridTemplateColumns: "1fr",
       justifyContent: "center",
       alignContent: "center",
       overflow: "hidden",
@@ -33,9 +32,12 @@ function App() {
       className="App"
       style={appStyle}
     >
-      <div className="content">
-        <h1>{affirmation}.</h1>
-        <button onClick={() => refreshAffirmation()}>Give me another one!</button>
+      <div
+        className="content"
+        onClick={() => refreshAffirmation()}
+      >
+        <h1 key={affirmation}>{affirmation}.</h1>
+        <p key={Math.random()}>Click to refresh</p>
       </div>
     </div>
   )
