@@ -38,7 +38,7 @@ function App() {
       onClick={() => refreshAffirmation()}
     >
       <div className="content">
-        <h1 key={affirmation}>{affirmation}.</h1>
+        <h1 key={affirmation}>{affirmation}</h1>
         <p key={Math.random()}>Click to refresh</p>
       </div>
     </div>
