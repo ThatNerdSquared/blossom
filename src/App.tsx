@@ -1,13 +1,23 @@
-import { useState } from 'react'
-import randomAffirmation from './affirmations'
+import { useEffect, useState } from 'react'
 import './App.css'
 
+interface BlossomResponse {
+  affirmation: string; 
+}
+
 function App() {
-  const [affirmation, setAffirmation] = useState<string>(randomAffirmation())
+  const [affirmation, setAffirmation] = useState<string>()
 
   const refreshAffirmation = () => {
-    setAffirmation(randomAffirmation())
+    const fetchAffirmation = async () => {
+      const res = await fetch('/api/get_positive', { method: 'GET' })
+      const data: BlossomResponse = await res.json()
+      setAffirmation(data.affirmation)
+    }
+    fetchAffirmation()
   }
+
+  useEffect(() => refreshAffirmation(), [])
 
   const tempBg = [
     "linear-gradient(to right, #ede9fe, #dbeafe)",
