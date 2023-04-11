@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "vercel dev"
   },
   "dependencies": {
     "@capacitor/core": "^4.6.1",
