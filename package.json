@@ -10,19 +10,19 @@
     "start": "vercel dev"
   },
   "dependencies": {
-    "@capacitor/core": "^5.5.1",
-    "@capacitor/ios": "5.5.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "unsplash-js": "^7.0.18"
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "6.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "unsplash-js": "^7.0.19"
   },
   "devDependencies": {
-    "@capacitor/cli": "^5.5.1",
-    "@ionic/cli": "^7.1.5",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@vitejs/plugin-react": "^4.1.1",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0"
+    "@capacitor/cli": "^6.0.0",
+    "@ionic/cli": "^7.2.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
   }
 }
